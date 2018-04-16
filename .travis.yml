@@ -23,6 +23,7 @@ before_install:
   - git clone https://github.com/OpenZWave/open-zwave.git open-zwave-read-only
   # lookup boost version
   #- sudo apt-cache search libboost
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; fi  
 
 # Build matrix definition
 # * Two builds
@@ -72,8 +73,8 @@ matrix:
     env: TARGET_ARCHITECTURE=x86_64
     install:
       - brew install boost|| true
-      - brew install libusb
-      - brew install libusb-compat
+      # - brew install libusb
+      # - brew install libusb-compat
       - brew install zlib || true
       - brew install openssl
       - brew link openssl --force
