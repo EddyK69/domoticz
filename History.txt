@@ -1,3 +1,5 @@
+Version 8.test (May 9th 2021)
+
 Version 3.xxx (October xxth 2017)
 - Implemented: Adjustment Value for Counter/Incremental sensors
 - Implemented: Camera, can now handle HTTPS url's
